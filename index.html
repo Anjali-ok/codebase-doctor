@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f6f3" />
+    <title>Codebase Doctor — Repository health</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=repository-cards-6" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#overview" aria-label="Codebase Doctor home">
+          <span class="brand-mark"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4.5 34 12.2v15.6L20 35.5 6 27.8V12.2L20 4.5Z"/><path d="M14 19.8h12M20 13.8v12"/><circle cx="20" cy="20" r="2.3"/></svg></span>
+          <span class="brand-copy"><strong>codebase<span>doctor</span></strong><small>ENGINEERING INTELLIGENCE</small></span>
+        </a>
+        <div class="workspace-switch"><span class="workspace-avatar">A</span><span><strong>Acme workspace</strong><small>Free plan</small></span><svg class="chevron" viewBox="0 0 16 16"><path d="m4 6 4 4 4-4"/></svg></div>
+        <div class="nav-caption">WORKSPACE</div>
+        <nav class="primary-nav" aria-label="Main navigation">
+          <button class="nav-item active" data-page="overview"><span class="nav-icon">⌂</span>Overview</button>
+          <button class="nav-item" data-page="repositories"><span class="nav-icon">⌘</span>Repositories<span class="nav-count" id="repo-count">1</span></button>
+          <button class="nav-item" data-page="issues"><span class="nav-icon">◈</span>Issues<span class="nav-count warning" id="issue-count">8</span></button>
+          <button class="nav-item" data-page="activity"><span class="nav-icon">◷</span>Scan activity</button>
+        </nav>
+        <div class="nav-caption tools-caption">TOOLS</div>
+        <nav class="primary-nav" aria-label="Tools navigation">
+          <button class="nav-item" data-page="tests"><span class="nav-icon">✓</span>Test center</button>
+          <button class="nav-item" data-page="audit"><span class="nav-icon">▤</span>Audit log</button>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="help-card"><div class="help-orb">✳</div><strong>Need a hand?</strong><p>Explore the quickstart guide to get your first repo analyzed.</p><button id="guide-btn">Open quickstart <span>↗</span></button></div>
+          <button class="profile"><span class="profile-avatar">AK</span><span><strong>Anjali Kawale</strong><small>Personal account</small></span><span class="profile-menu">•••</span></button>
+        </div>
+      </aside>
+
+      <main class="main-area">
+        <header class="topbar"><div class="breadcrumbs"><span>Workspace</span><b>/</b><strong id="crumb-current">Overview</strong></div><div class="top-actions"><span id="showcase-badge" class="showcase-badge" hidden>SHOWCASE · SAMPLE DATA</span><span class="system-status"><i></i>All systems operational</span><button class="icon-button" aria-label="Notifications">♧<span class="notify-dot"></span></button><span class="top-avatar">AK</span></div></header>
+        <section id="page-content" class="page-content"></section>
+      </main>
+    </div>
+    <div id="toast" class="toast" role="status"></div>
+    <div id="modal-root"></div>
+    <script src="app.js?v=integrations-5"></script>
+  </body>
+</html>
